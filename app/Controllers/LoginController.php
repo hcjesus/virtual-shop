@@ -48,8 +48,15 @@ class LoginController extends BaseController
 				'correo'  => $user->correo,
 				'rol'     => $user->rol
 			];
-
-			$this->session->set($sessionData);			
+/*
+			$sessionData = [
+				'id' 	  => '1',
+				'usuario' => 'admin',
+				'correo'  => 'admin',
+				'rol'     => '0'
+			];
+*/
+			$this->session->set('usuario',$sessionData);			
 			//$this->template('home',$passData);
 			return redirect()->to('home');
 

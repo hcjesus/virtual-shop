@@ -31,10 +31,10 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => 'routing',
-		'database' => 'shop',
+		'hostname' => 'sql203.epizy.com',
+		'username' => 'epiz_26595808',
+		'password' => 'zwdp9UrGTiVh',
+		'database' => 'epiz_26595808_shop',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,

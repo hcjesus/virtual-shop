@@ -7,7 +7,7 @@ class RegistroModel extends Model
 	protected $table = "ci_users";
 	protected $primaryKey = 'id';
 
-	protected $allowedFields = ['nombre','correo','contrasena'];
+	protected $allowedFields = ['id','nombre','correo','contrasena'];
 
     protected $returnType     = 'App\Entities\User';
     protected $useSoftDeletes = false;

@@ -55,14 +55,15 @@
   <nav class="" role="navigation">
     <div class="nav "><?= anchor('','<i class="large material-icons home">home</i>',['id'=>'logo-container','class'=>'brand-logo']);?>
       <ul class="right hide-on-med-and-down">
+        <?php $session = \Config\Services::session(); ?>
         <?php if(session()->has('usuario')):  ?>
-          <?php if(session()->rol == '0'): ?>
+          <?php if($session->usuario['rol'] == '0'): ?>
             <li><?= anchor('#!','Nuevo',['id'=>'algo','class'=>'dropdown-trigger','data-target'=>'dropdown2']);?></li>
             <li><?= anchor('items','Lista');?></li>
             <li>
               <a href="#!" id="algo" class="dropdown-trigger" data-target="dropdown1">                
                   <div class="usr-name">
-                    <span>session()->usuario</span>
+                    <span><?= $session->usuario['usuario'] ?></span>
                   </div>
               </a>
             </li>
@@ -91,7 +92,7 @@
                 <?php endif ?>  
               </a>
             </li>
-            <li><?= anchor('#!',session()->usuario,['id'=>'algo','class'=>'dropdown-trigger','data-target'=>'dropdown1']);?></li>
+            <li><?= anchor('#!','session()->usuario[]',['id'=>'algo','class'=>'dropdown-trigger','data-target'=>'dropdown1']);?></li>
           <?php endif ?> 
         <?php else : ?>
           <li><?= anchor('registro','Registro');?></li>
@@ -158,7 +159,7 @@
               </a>
             </li>
             <li class="divider"></li>
-            <li><?= anchor('#!',session()->usuario,['id'=>'algo','class'=>'dropdown-trigger','data-target'=>'mdropdown1']);?></li>
+            <li><?= anchor('#!','session()->usuario',['id'=>'algo','class'=>'dropdown-trigger','data-target'=>'mdropdown1']);?></li>
           <?php endif ?> 
         <?php else : ?>
           <li><?= anchor('registro','Registro');?></li>

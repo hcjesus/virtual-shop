@@ -7,7 +7,7 @@ class UsersModel extends Model
 	protected $table = "ci_users";
 	protected $primaryKey = 'id';
 
-	protected $allowedFields = ['nombre','correo','contrasena','rol'];
+	protected $allowedFields = ['id','nombre','correo','contrasena','rol'];
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;

@@ -5,9 +5,11 @@
   <div class="section">
     <div class="container">
       <div class="carousel">
-        <?php if (isset($carrousel)) : ?>
-          <?php foreach ($carrousel as $item) :?>
-            <a class="carousel-item" href="#one<?= $item['id']?>"><img src="<?= base_url('assets/images/'.$item['imagen']); ?>"></a>
+        <?php if (isset($items)) : ?>
+          <?php foreach ($items as $item) :?>
+            <?php if ($item['carrousel'] == '1') : ?>
+              <a class="carousel-item" href="#one<?= $item['id']?>"><img src="<?= base_url('assets/images/'.$item['imagen']); ?>"></a>
+            <?php endif ?>
           <?php endforeach ?>
         <?php endif ?>
       </div>
@@ -20,6 +22,7 @@
     <div class="">
       <div class="row">
         <?php if(isset($items)) : ?>
+          ds
           <?php foreach($items as $item) : ?>
             <div class="col s12 m6 l3">
               <div class="card small  sticky-action">

@@ -8,10 +8,11 @@ class HomeController extends BaseController
 	{
 		$model = new ItemsModel();
 
-		$data['carrousel'] = $model->where('carrousel', 1)
-                   ->findAll(); 
+		//$data['carrousel'] = $model->where('carrousel', 1)
+        //         ->findAll(); 
 
         $data['items'] = $model->findAll();           
+
 
 		echo view('home',$data);
 		//$this->template('home',$data);		

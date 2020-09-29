@@ -21,8 +21,8 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost/virtualShop';
-
+	//public $baseURL = 'http://localhost/virtualShop';
+	public $baseURL = 'http://virtualshop.freecluster.eu';
 	/*
 	|--------------------------------------------------------------------------
 	| Index File
